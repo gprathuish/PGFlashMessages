@@ -19,7 +19,7 @@ export class FlashMessageComponent implements OnInit {
 
   appendMessage(message) {
     const defaultOptions = {
-      classes: [],
+      classes: '',
       timeout: 3000
     };
 

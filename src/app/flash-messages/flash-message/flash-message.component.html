@@ -1,6 +1,6 @@
 <p>
   flash-message works!
 </p>
-<p *ngFor="let message of messages">
+<p *ngFor="let message of messages" [ngClass]="message.options.classes">
  --------- {{message.text}} ------------
 </p>

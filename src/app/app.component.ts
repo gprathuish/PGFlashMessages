@@ -12,8 +12,12 @@ export class AppComponent {
 
   constructor(private fmService: FlashMessageService) {}
 
-  showMessage() {
+  showMessage(timeout) {
     console.log('Messaged Called');
-    this.fmService.show('Hi', { classes: 'alert alert-danger',  });
+    let options = { classes: 'alert alert-danger'};
+    if (timeout) {
+      options['timeout'] = timeout;
+    }
+    this.fmService.show('Hi', options);
   }
 }
